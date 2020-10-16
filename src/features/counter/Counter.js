@@ -7,6 +7,7 @@ import {
   incrementAsync,
   selectCount,
 } from './counterSlice';
+import { Button } from "@blueprintjs/core";
 import styles from './Counter.module.css';
 
 export function Counter() {
@@ -22,8 +23,9 @@ export function Counter() {
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
-          +
-        </button>
+          </button>
+        <Button intent="success" text="+" onClick={() => dispatch(increment())} />
+        
         <span className={styles.value}>{count}</span>
         <button
           className={styles.button}
