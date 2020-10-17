@@ -27,6 +27,13 @@ class CardModel {
     toString() {
         return this.text;
     }
+
+    toJSON() {
+        return {
+            text: this.text,
+            id: this._id
+        }
+    }
 }
 
 export default CardModel;
