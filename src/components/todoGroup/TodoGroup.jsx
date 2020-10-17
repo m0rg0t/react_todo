@@ -26,9 +26,6 @@ function TodoGroup() {
                     card: { text: 'someCard' }
                 }))} />
 
-                <Button text={"Remove new card"} onClick={() => dispatch(remove({
-                    id: 1
-                }))} />
             </Card>
         </div>
     );
