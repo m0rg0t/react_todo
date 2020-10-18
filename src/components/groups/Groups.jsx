@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from "@bem-react/classname";
+import {cn} from "@bem-react/classname";
 import {useSelector} from "react-redux";
 import TodoGroup from "components/todoGroup";
 import {selectAllGroups} from "reducers/groups/groupsSlice";
@@ -13,7 +13,7 @@ function Groups() {
         <div className={className()}>
             {
                 Object.entries(allGroups).map(([id, group]) => {
-                    return <TodoGroup group={group} key={id} />
+                    return <TodoGroup group={group} key={id}/>
                 })
             }
         </div>);

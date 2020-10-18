@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import GroupModel from 'models/GroupModel';
 import {
-    add as addNewCard
+    add as addNewCard, removeByIds as removeCardsByIds
 } from 'reducers/cards/cardsSlice';
 
 const getModelData = (payload) => {
@@ -21,8 +21,8 @@ export const cardsSlice = createSlice({
             state[action.payload.id] = action.payload;
         },
         remove: (state, action) => {
-            if (state[action.payload.id]) {
-                delete state[action.payload.id]; 
+            if (state[action.payload]) {
+                delete state[action.payload];
             }
         },
         update: (state, action) => {
@@ -39,6 +39,11 @@ export const cardsSlice = createSlice({
         }
     },
 });
+
+export const deleteGroupAndCards = (group) => dispatch => {
+    dispatch(remove(group.id));
+    dispatch(removeCardsByIds(group.cards));
+};
 
 export const addCard = (groupId, card) => dispatch => {
     dispatch(addNewCard(card));
