@@ -10,7 +10,7 @@ class CardModel {
      * @param {string} text 
      * @param {*} order 
      */
-    constructor(text, order = 0) {
+    constructor(text= 'card', order = 0) {
         this._id = nanoid();
     }
 

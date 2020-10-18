@@ -4,8 +4,9 @@ import { Button, Card, EditableText } from "@blueprintjs/core";
 
 import { useDispatch } from 'react-redux';
 import {
-    add
-} from './../../reducers/cards/cardsSlice';
+    update, addCard
+} from 'reducers/groups/groupsSlice';
+import CardModel from "models/CardModel";
 const className = cn('TodoGroup');
 
 /**
@@ -20,12 +21,16 @@ function TodoGroup({ group }) {
         <div className={className()}>
             <Card>
                 <div className={className("GroupHeader")}>
-                    <EditableText multiline={false} minLines={1} value={group.name} />
+                    <EditableText multiline={false} minLines={1}
+                        onChange={(value) => {
+                            dispatch(update({
+                                ...group,
+                                name: value
+                            }));
+                        }}
+                        value={group.name} />
                 </div>
-                <Button text={"Add new card"} onClick={() => dispatch(add({
-                    id: 1,
-                    card: { text: 'someCard' }
-                }))} />
+                <Button text={"Add new card"} onClick={() => dispatch(addCard(group.id, new CardModel()))} />
             </Card>
         </div>
     );
