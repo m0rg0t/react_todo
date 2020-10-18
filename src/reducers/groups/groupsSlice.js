@@ -18,7 +18,7 @@ export const cardsSlice = createSlice({
     },
     reducers: {
         add: (state, action) => {
-            state[action.payload.id] = getModelData(action.payload);
+            state[action.payload.id] = action.payload;
         },
         remove: (state, action) => {
             if (state[action.payload.id]) {
@@ -27,12 +27,11 @@ export const cardsSlice = createSlice({
         },
         update: (state, action) => {
             if (state[action.payload.id]) {
-                state[action.payload.id] = getModelData(action.payload);
+                state[action.payload.id] = action.payload;
             }
         },
         addCardById: (state, action) => {
             let currentGroup = state[action.payload.groupId];
-            debugger;
             if (currentGroup && !currentGroup.cards.find(id => id === action.payload.cardId)) {
                 currentGroup.cards.push(action.payload.cardId);
                 state[action.payload.groupId] = currentGroup;

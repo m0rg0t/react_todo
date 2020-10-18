@@ -13,7 +13,7 @@ function Groups() {
         <div className={className()}>
             {
                 Object.entries(allGroups).map(([id, group]) => {
-                    return <TodoGroup group={group} />
+                    return <TodoGroup group={group} key={id} />
                 })
             }
         </div>);
