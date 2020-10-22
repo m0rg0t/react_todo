@@ -2,9 +2,9 @@ import React from 'react';
 import {Button, Navbar, Alignment} from "@blueprintjs/core";
 import './Header.css';
 import {useDispatch} from "react-redux";
-import {add} from "reducers/groups/groupsSlice";
-import GroupModel from "models/GroupModel";
 import {addDefaultCard} from "../../reducers/groups/groupsSlice";
+import store from "../../app/store";
+
 
 function Header() {
     const dispatch = useDispatch();
@@ -15,9 +15,8 @@ function Header() {
                     <Navbar.Heading>React TODO app</Navbar.Heading>
                     <Navbar.Divider/>
                     <Button className="bp3-minimal" icon="add"
-                            onClick={() => dispatch(addDefaultCard())}
+                            onClick={() => dispatch(addDefaultCard(store.getState()))}
                             text="Add Group"/>
-                    {/*<Button className="bp3-minimal" icon="document" text="World" />*/}
                 </Navbar.Group>
             </Navbar>
         </header>

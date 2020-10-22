@@ -1,12 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import {configureStore} from '@reduxjs/toolkit';
 import cardsReducer from '../reducers/cards/cardsSlice';
-import groupsReducer from '../reducers/groups/groupsSlice';
+import groupReducer from '../reducers/groups/groupsSlice';
 
 export default configureStore({
-  reducer: {
-    counter: counterReducer,
-    cards: cardsReducer,
-    groups: groupsReducer
-  },
+    reducer: {
+        groups: groupReducer,
+        cards: cardsReducer
+    }
 });
