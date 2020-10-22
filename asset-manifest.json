@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d652943.chunk.css",
-    "main.js": "/static/js/main.936d9494.chunk.js",
-    "main.js.map": "/static/js/main.936d9494.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3274b26b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3274b26b.js.map",
-    "static/css/2.e04e675d.chunk.css": "/static/css/2.e04e675d.chunk.css",
-    "static/js/2.7ce735d3.chunk.js": "/static/js/2.7ce735d3.chunk.js",
-    "static/js/2.7ce735d3.chunk.js.map": "/static/js/2.7ce735d3.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e1c1f1eaa042a6e1623ac69ed5837a65.js": "/precache-manifest.e1c1f1eaa042a6e1623ac69ed5837a65.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.e04e675d.chunk.css.map": "/static/css/2.e04e675d.chunk.css.map",
-    "static/css/main.8d652943.chunk.css.map": "/static/css/main.8d652943.chunk.css.map",
-    "static/js/2.7ce735d3.chunk.js.LICENSE.txt": "/static/js/2.7ce735d3.chunk.js.LICENSE.txt",
-    "static/media/blueprint-icons.css": "/static/media/icons-20.cef8cdbb.woff"
+    "main.css": "/react_todo/static/css/main.8d652943.chunk.css",
+    "main.js": "/react_todo/static/js/main.b8202dde.chunk.js",
+    "main.js.map": "/react_todo/static/js/main.b8202dde.chunk.js.map",
+    "runtime-main.js": "/react_todo/static/js/runtime-main.f3caa06c.js",
+    "runtime-main.js.map": "/react_todo/static/js/runtime-main.f3caa06c.js.map",
+    "static/css/2.8bd3dc7d.chunk.css": "/react_todo/static/css/2.8bd3dc7d.chunk.css",
+    "static/js/2.dd060455.chunk.js": "/react_todo/static/js/2.dd060455.chunk.js",
+    "static/js/2.dd060455.chunk.js.map": "/react_todo/static/js/2.dd060455.chunk.js.map",
+    "index.html": "/react_todo/index.html",
+    "precache-manifest.527f2ab937b56475e80dcfebefa8660e.js": "/react_todo/precache-manifest.527f2ab937b56475e80dcfebefa8660e.js",
+    "service-worker.js": "/react_todo/service-worker.js",
+    "static/css/2.8bd3dc7d.chunk.css.map": "/react_todo/static/css/2.8bd3dc7d.chunk.css.map",
+    "static/css/main.8d652943.chunk.css.map": "/react_todo/static/css/main.8d652943.chunk.css.map",
+    "static/js/2.dd060455.chunk.js.LICENSE.txt": "/react_todo/static/js/2.dd060455.chunk.js.LICENSE.txt",
+    "static/media/blueprint-icons.css": "/react_todo/static/media/icons-20.cef8cdbb.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.3274b26b.js",
-    "static/css/2.e04e675d.chunk.css",
-    "static/js/2.7ce735d3.chunk.js",
+    "static/js/runtime-main.f3caa06c.js",
+    "static/css/2.8bd3dc7d.chunk.css",
+    "static/js/2.dd060455.chunk.js",
     "static/css/main.8d652943.chunk.css",
-    "static/js/main.936d9494.chunk.js"
+    "static/js/main.b8202dde.chunk.js"
   ]
 }
