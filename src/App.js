@@ -24,11 +24,6 @@ function App() {
     <div className="App">
       <Header/>
       <main>
-          <Button text={"Add new group"} onClick={() => dispatch(
-              add(
-                  (new GroupModel('someName1')).toJSON()
-              )
-          )} />
           <Groups />
       </main>
       <footer>

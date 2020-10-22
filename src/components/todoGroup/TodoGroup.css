@@ -1,4 +1,16 @@
 .TodoGroup-GroupHeader {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.TodoGroup {
+    width: 300px;
+    margin: 10px;
+}
+
+.TodoGroup-GroupName {
+    width: 100%;
+}
+.TodoGroup-GroupMenu {
+    cursor: pointer;
 }

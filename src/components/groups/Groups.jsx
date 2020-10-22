@@ -9,14 +9,16 @@ const className = cn('Groups');
 
 function Groups() {
     const allGroups = useSelector(selectAllGroups);
+    //debugger;
     return (
         <div className={className()}>
             {
-                Object.entries(allGroups).map(([id, group]) => {
+                allGroups && Object.entries(allGroups).map(([id, group]) => {
                     return <TodoGroup group={group} key={id}/>
                 })
             }
-        </div>);
+        </div>
+    );
 }
 
 export default Groups;

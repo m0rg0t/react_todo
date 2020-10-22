@@ -4,6 +4,7 @@ import './Header.css';
 import {useDispatch} from "react-redux";
 import {add} from "reducers/groups/groupsSlice";
 import GroupModel from "models/GroupModel";
+import {addDefaultCard} from "../../reducers/groups/groupsSlice";
 
 function Header() {
     const dispatch = useDispatch();
@@ -12,14 +13,10 @@ function Header() {
             <Navbar>
                 <Navbar.Group align={Alignment.LEFT}>
                     <Navbar.Heading>React TODO app</Navbar.Heading>
-                    <Navbar.Divider />
-                    <Button className="bp3-minimal" icon="home"
-                            onClick={() => dispatch(
-                                add(
-                                    (new GroupModel('someName1')).toJSON()
-                                )
-                            )}
-                            text="Add Group" />
+                    <Navbar.Divider/>
+                    <Button className="bp3-minimal" icon="add"
+                            onClick={() => dispatch(addDefaultCard())}
+                            text="Add Group"/>
                     {/*<Button className="bp3-minimal" icon="document" text="World" />*/}
                 </Navbar.Group>
             </Navbar>

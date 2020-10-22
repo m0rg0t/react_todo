@@ -3,6 +3,7 @@ import GroupModel from 'models/GroupModel';
 import {
     add as addNewCard, removeByIds as removeCardsByIds
 } from 'reducers/cards/cardsSlice';
+import store from "../../app/store";
 
 const getModelData = (payload) => {
     let payloadData = payload;
@@ -12,7 +13,7 @@ const getModelData = (payload) => {
     return payloadData;
 }
 
-export const cardsSlice = createSlice({
+export const groupsSlice = createSlice({
     name: 'groups',
     initialState: {
     },
@@ -40,6 +41,16 @@ export const cardsSlice = createSlice({
     },
 });
 
+export const addDefaultCard = () => dispatch => {
+    debugger;
+    console.log("store.getState()", store.getState());
+    const groupCount = Object.keys(store.getState().groups).length + 1;
+    debugger;
+    dispatch(add(
+        (new GroupModel(`Group${groupCount}`)).toJSON()
+    ));
+};
+
 export const deleteGroupAndCards = (group) => dispatch => {
     dispatch(remove(group.id));
     dispatch(removeCardsByIds(group.cards));
@@ -50,11 +61,11 @@ export const addCard = (groupId, card) => dispatch => {
     dispatch(addCardById({groupId: groupId, cardId: card.id }));
 };
 
-export const { add, remove, update, addCardById } = cardsSlice.actions;
+export const { add, remove, update, addCardById } = groupsSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectAllGroups = state => state.groups;
 
-export default cardsSlice.reducer;
+export default groupsSlice.reducer;
