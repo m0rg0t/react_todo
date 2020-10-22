@@ -1,0 +1,4 @@
+.TodoCard-Card {
+    display: flex;
+    flex-direction: column;
+}

@@ -9,7 +9,7 @@ import {
 import CardModel from "models/CardModel";
 import TodoCard from "components/todoCard";
 import './TodoGroup.css';
-import {DragDropContext, Droppable} from "react-beautiful-dnd";
+import {Droppable} from "react-beautiful-dnd";
 
 const className = cn('TodoGroup');
 

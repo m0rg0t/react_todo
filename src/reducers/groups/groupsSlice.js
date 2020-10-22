@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-//import store from "../../app/store";
 import GroupModel from "../../models/GroupModel";
 import {
     add as addNewCard, removeByIds as removeCardsByIds

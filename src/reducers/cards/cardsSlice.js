@@ -21,6 +21,7 @@ export const cardsSlice = createSlice({
         removeByIds: (state, action) => {
             action.payload.map(cardId => {
                 state[cardId] && delete state[cardId];
+                return cardId;
             })
         }
     },
@@ -30,6 +31,7 @@ export const removeCardInGroups = (cardId) => (dispatch, getState) => {
     const {groups} = getState();
     Object.keys(groups).map(groupId => {
         dispatch(removeCardById({groupId, cardId}));
+        return groupId;
     });
 }
 
