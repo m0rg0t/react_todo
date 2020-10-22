@@ -2,7 +2,7 @@
   "name": "react_todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://m0rg0t.github.io/react-todo",
+  "homepage": "http://m0rg0t.github.io/react_todo",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@bem-react/classname": "^1.5.8",
